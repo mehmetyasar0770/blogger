@@ -1,5 +1,7 @@
 .blog-item{
     border: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-item .blog-image-wrapper{
@@ -18,4 +20,5 @@
     padding: 10px;
     row-gap: 6px;
 }
+
 

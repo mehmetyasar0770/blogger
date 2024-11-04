@@ -19,10 +19,13 @@ function BlogItem(props) {
         <p className="blog-content">{props.content}</p>
         <span className="blog-author">{props.author}</span>
         <span className="blog-date">{props.date}</span>
-        <Button color="success">
+        <div className="dummy-div"></div>
+       
+        <Button color="success" className= "btn">
           <strong>Güncelle</strong>
         </Button>
-        <Button color="danger">Sil</Button>
+        <Button color="danger" className= "btn">Sil</Button>
+        
       </div>
     </div>
   );
