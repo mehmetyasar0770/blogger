@@ -7,7 +7,7 @@
 }
 
 .blog-item .blog-image{
-    width: 300;
+    width: 300px;
     height: 250px;
     object-fit: cover;
 }
@@ -19,14 +19,3 @@
     row-gap: 6px;
 }
 
-.blog-item .blog-category{
-    display: inline-block;
-    padding: 5px 10px;
-    text-align: end;
-    background-color: red;
-    border-radius: 10px;
-    font-size: 12px;
-    margin-left: 10px;
-    margin-top: 10px;
-    color: white;
-}

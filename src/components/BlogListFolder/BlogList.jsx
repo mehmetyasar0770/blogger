@@ -3,6 +3,7 @@ import { blogData } from  "../../data/blogData";
 import AddNewBlog from "./AddNewBlog";
 import BlogItem from "./BlogItem";
 import "./BlogList.css";
+import LocalFloristOutlinedIcon from '@mui/icons-material/LocalFloristOutlined';
 
 
 function BlogList() {
@@ -10,7 +11,11 @@ function BlogList() {
 
   return (
     <div className="blog-list">
-      <h2>Blogs</h2>
+      <div className="header-div">
+      <LocalFloristOutlinedIcon  fontSize="large"/>
+      <h2>İç Mekan Güzellikleri Bloğu</h2>
+      </div>
+        
       <AddNewBlog
         blogs={blogs}
         setBlogs={setBlogs}
