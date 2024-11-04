@@ -31,7 +31,7 @@ function BlogList() {
       />
       </div>
       <div className="blogs-wrapper">
-        {blogData.map((Item) => {
+        {blogs.map((Item) => {
           return (
             <BlogItem
               key={Item.id}

@@ -33,7 +33,7 @@ const blogInputs = [
     label: "Resim Linki",
     type: "text",
     placeholder: "Görsel linki giriniz.",
-    name: "image",
+    name: "imageURL", // "imageURL" is correct here
   },
 ];
 
@@ -43,15 +43,20 @@ function AddNewBlog({ blogs, setBlogs }) {
     content: "",
     author: "",
     date: "",
-    imageURL: "",
+    imageURL: "", // Ensure state uses "imageURL"
   });
-  
+
   function handleChange({ target: { name, value } }) {
     setBlog({ ...blog, [name]: value });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    const newBlog = {
+      id: Math.random(),
+      ...blog,
+    };
 
     const isFormValid = Object.values(blog).every(
       (value) => value.trim() !== ""
@@ -62,18 +67,19 @@ function AddNewBlog({ blogs, setBlogs }) {
       return;
     }
 
-    const newBlog = {
-      id: Math.random(),
-      ...blog,
-      
-    };
     setBlogs([newBlog, ...blogs]);
+    console.log("yeni blog eklendi")
   }
 
   return (
     <form className="add-blog-form" onSubmit={handleSubmit}>
       {blogInputs.map((input, index) => (
-        <BlogInput key={index} {...input} handleChange={handleChange} />
+        <BlogInput
+          key={index}
+          {...input}
+          value={blog[input.name]} // Pass the current value from blog state
+          handleChange={handleChange} // Pass handleChange as onChange
+        />
       ))}
       <Button color={"success"}>Yeni Yazı Ekle</Button>
     </form>
