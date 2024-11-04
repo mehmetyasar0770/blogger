@@ -1,5 +1,5 @@
 .blog-item{
-    border: 1px solid #eee;
+    border: 2px solid #eee;
 }
 
 .blog-item .blog-image-wrapper{
@@ -7,8 +7,8 @@
 }
 
 .blog-item .blog-image{
-    width: 100%;
-    height: 200px;
+    width: 300;
+    height: 250px;
     object-fit: cover;
 }
 

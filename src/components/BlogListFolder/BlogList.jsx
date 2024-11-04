@@ -16,7 +16,7 @@ function BlogList() {
         setBlogs={setBlogs}
       />
       <div className="blogs-wrapper">
-        {BlogList.map((Item) => {
+        {blogData.map((Item) => {
           return (
             <BlogItem
               key={Item.id}

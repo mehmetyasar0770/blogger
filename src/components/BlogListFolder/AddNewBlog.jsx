@@ -58,7 +58,7 @@ function AddNewBlog({ blogs, setBlogs }) {
     );
 
     if (!isFormValid) {
-      console.error("Input alanları boş geçilemez!");
+      alert("Input alanları boş geçilemez!");
       return;
     }
 
