@@ -12,14 +12,24 @@ function BlogList() {
   return (
     <div className="blog-list">
       <div className="header-div">
+        <div className="icon-div">
       <LocalFloristOutlinedIcon  fontSize="large"/>
-      <h2>İç Mekan Güzellikleri Bloğu</h2>
+      <LocalFloristOutlinedIcon  fontSize="large"/>
+      <LocalFloristOutlinedIcon  fontSize="large"/>
+      <LocalFloristOutlinedIcon  fontSize="large"/>
+      <LocalFloristOutlinedIcon  fontSize="large"/>
+      <LocalFloristOutlinedIcon  fontSize="large"/>
+      <LocalFloristOutlinedIcon  fontSize="large"/>
       </div>
-        
-      <AddNewBlog
+      
+      <h2>İç Mekan Güzellikleri</h2>
+      </div>
+        <div className="new-blog"><AddNewBlog
         blogs={blogs}
         setBlogs={setBlogs}
+      
       />
+      </div>
       <div className="blogs-wrapper">
         {blogData.map((Item) => {
           return (

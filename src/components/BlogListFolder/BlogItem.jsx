@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Button from "../UI/Button";
 import "./BlogItem.css";
+import LocalFloristOutlinedIcon from '@mui/icons-material/LocalFloristOutlined'; 
 
 function BlogItem(props) {
   return (
@@ -18,7 +19,7 @@ function BlogItem(props) {
         <p className="blog-content">{props.content}</p>
         <span className="blog-author">{props.author}</span>
         <span className="blog-date">{props.date}</span>
-        <Button color="primary">
+        <Button color="success">
           <strong>Güncelle</strong>
         </Button>
         <Button color="danger">Sil</Button>

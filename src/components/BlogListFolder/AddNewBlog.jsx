@@ -6,31 +6,31 @@ import BlogInput from "./BlogInput";
 
 const blogInputs = [
   {
-    label: "Title",
+    label: "Başlık",
     type: "text",
     placeholder: "Blog başlığı giriniz.",
     name: "title",
   },
   {
-    label: "Content",
+    label: "İçerik",
     type: "text",
     placeholder: "İçerik giriniz.",
     name: "content",
   },
   {
-    label: "Author",
+    label: "Yazar",
     type: "text",
     placeholder: "Yazar adı giriniz.",
     name: "author",
   },
   {
-    label: "Date",
+    label: "Tarih",
     type: "text",
     placeholder: "Tarih giriniz.",
     name: "date",
   },
   {
-    label: "Image URL",
+    label: "Resim Linki",
     type: "text",
     placeholder: "Görsel linki giriniz.",
     name: "image",

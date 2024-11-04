@@ -1,9 +1,23 @@
-.header-div {
+.blog-list  .header-div {
     display:flex;
     flex-direction:column;
 }
+.blog-list  .icon-div {
+    display:flex;
+    flex-direction:row;
+    
+}
+
 .blogs-wrapper{
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr))
+}
+.new-blog {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-div h2 {
+    margin-left: 4px;
 }
