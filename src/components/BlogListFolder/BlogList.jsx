@@ -9,6 +9,22 @@ import LocalFloristOutlinedIcon from '@mui/icons-material/LocalFloristOutlined';
 function BlogList() {
   const [blogs, setBlogs] = useState(blogData);
 
+  const handleDelete = (blogId) => {
+    // console.log("Deleting blog with id:", id);
+    const filteredBlogs = blogs.filter((item) => item.id !== blogId);
+    setBlogs(filteredBlogs);
+  };
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+    //console.log(event.target.value);
+  };
+
+  const filteredBlogs = blogs.filter((blog) =>
+    blog.title.toLowerCase().includes(searchTerm.toLowerCase())
+   
+  );
   return (
     <div className="blog-list">
       <div className="header-div">
@@ -29,17 +45,31 @@ function BlogList() {
         setBlogs={setBlogs}
       
       />
+      
       </div>
+
+      <div className="blog-filter">
+       <input
+            type="text"
+            className="blog-input"
+            placeholder="Ara..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+      </div>
+
       <div className="blogs-wrapper">
-        {blogs.map((Item) => {
+        {filteredBlogs.map((Item) => {
           return (
             <BlogItem
               key={Item.id}
+              id={Item.id}
               imageURL={Item.imageURL}
               title={Item.title}
               content={Item.content}
               author={Item.author}
               date={Item.date} 
+              handleDelete={handleDelete}
 
             />
           );
