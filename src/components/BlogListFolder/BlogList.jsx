@@ -8,6 +8,7 @@ import LocalFloristOutlinedIcon from '@mui/icons-material/LocalFloristOutlined';
 
 function BlogList() {
   const [blogs, setBlogs] = useState(blogData);
+  const [sortBy, setSortBy] = useState("date");
 
   const handleDelete = (blogId) => {
     // console.log("Deleting blog with id:", id);
@@ -25,6 +26,21 @@ function BlogList() {
     blog.title.toLowerCase().includes(searchTerm.toLowerCase())
    
   );
+
+  const handleSortChange = (event) => {
+    setSortBy(event.target.value);
+  };
+  const sortedBlogs = filteredBlogs.sort((a, b) => {
+    if (sortBy === "date") {
+      return new Date(a.date) - new Date(b.date);
+    } else if (sortBy === "author") {
+      return a.author.localeCompare(b.author);
+    }
+    return 0;
+  });
+
+  let updatedBlogs = sortedBlogs;
+  
   return (
     <div className="blog-list">
       <div className="header-div">
@@ -56,11 +72,20 @@ function BlogList() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
+           <select
+            value={sortBy}
+            className="blog-select"
+            onChange={handleSortChange}
+          >
+            <option value="date">Tarihe Göre Sırala</option>
+            <option value="author">Yazara Göre Sırala</option>
+          </select>
           
       </div>
 
+
       <div className="blogs-wrapper">
-        {filteredBlogs.map((Item) => {
+        {updatedBlogs.map((Item) => {
           return (
             <BlogItem
               key={Item.id}
@@ -71,6 +96,7 @@ function BlogList() {
               author={Item.author}
               date={Item.date} 
               handleDelete={handleDelete}
+              
 
             />
           );

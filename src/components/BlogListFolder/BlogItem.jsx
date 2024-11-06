@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Button from "../UI/Button";
 import "./BlogItem.css";
-import LocalFloristOutlinedIcon from '@mui/icons-material/LocalFloristOutlined'; 
+
 
 function BlogItem(props) {
   const {id, title,content,author,date,imageURL,handleDelete} = props;
@@ -10,7 +10,7 @@ function BlogItem(props) {
       <div className="blog-image-wrapper">
         <img
           className="blog-image"
-          src={props.imageURL}
+          src={imageURL}
           alt=" "
           width={200}
         />
@@ -25,7 +25,7 @@ function BlogItem(props) {
         <Button color="success" className= "btn">
           <strong>Güncelle</strong>
         </Button>
-        <Button color="danger" className= "btn" onClick={() => props.handleDelete(id)}>Sil</Button>
+        <Button color="danger" className= "btn" onClick={() => handleDelete(id)}>Sil</Button>
         
       </div>
     </div>

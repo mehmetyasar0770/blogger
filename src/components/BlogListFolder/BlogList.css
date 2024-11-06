@@ -14,9 +14,19 @@
 .blog-filter .blog-input {
     font-size: 1rem;
     border: 2px solid #4d4c4c;
-    margin-left: 2px;
+    margin: 2px;
+    margin-bottom: 1rem;
     border-radius: 5px;
-    width: 355px;
+    width: 175px;
+    padding: 5px;
+}
+.blog-filter .blog-select {
+    font-size: 1rem;
+    border: 2px solid #4d4c4c;
+    margin: 2px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    width: 175px;
     padding: 5px;
 }
 .blogs-wrapper{

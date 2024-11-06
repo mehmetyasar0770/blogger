@@ -3,7 +3,7 @@ export const blogData = [
         id:1,
         title: "Evde Saksıda Orkide Yetiştirmenin Püf Noktaları",
         content: "Orkideler, zarif görünümleri ve egzotik çiçekleriyle birçok kişinin hayranlığını kazanan bitkilerdir. Ancak evde orkide yetiştirmek, sabır ve özen gerektiren bir süreçtir. Orkidelerin sağlıklı bir şekilde büyümesi için ideal sıcaklık, nem ve ışık koşullarını sağlamak oldukça önemlidir. Bu yazımızda, evde saksıda orkide yetiştirmek isteyenler için bazı püf noktalarını ve ipuçlarını bulabilirsiniz. ... ",
-        author: "Ayşe Yılmaz",
+        author: "Hanife Ayşe Yılmaz",
         date: "2023-11-20",
         imageURL: "https://cdn.cicekmarket.com/cicek-resim/l/cm125.jpg",
     },
