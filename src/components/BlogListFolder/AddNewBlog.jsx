@@ -77,8 +77,8 @@ function AddNewBlog({ blogs, setBlogs }) {
         <BlogInput
           key={index}
           {...input}
-          value={blog[input.name]} // Pass the current value from blog state
-          handleChange={handleChange} // Pass handleChange as onChange
+          value={blog[input.name]} 
+          handleChange={handleChange}
         />
       ))}
       <Button color={"success"}>Yeni Yazı Ekle</Button>

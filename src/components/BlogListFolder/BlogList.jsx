@@ -40,6 +40,16 @@ function BlogList() {
   });
 
   let updatedBlogs = sortedBlogs;
+
+  const handleUpdate = (id, updatedTitle, updatedContent) => {
+    setBlogs(
+      blogs.map((blog) =>
+        blog.id === id
+          ? { ...blog, title: updatedTitle, content: updatedContent }
+          : blog
+      )
+    );
+  };
   
   return (
     <div className="blog-list">
@@ -96,6 +106,7 @@ function BlogList() {
               author={Item.author}
               date={Item.date} 
               handleDelete={handleDelete}
+              handleUpdate={handleUpdate}
               
 
             />

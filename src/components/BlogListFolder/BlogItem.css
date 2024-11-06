@@ -20,5 +20,18 @@
     padding: 10px;
     row-gap: 6px;
 }
+ .blog-item .edit-blog {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+ }
+ .blog-item .edit-blog *{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+ }
 
+ .blog-item .edit-blog textarea {
+    height: 300px;
+ }
 
