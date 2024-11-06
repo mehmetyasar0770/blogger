@@ -11,6 +11,14 @@
 .blog-info {
     flex-grow: 1;
 }
+.blog-filter .blog-input {
+    font-size: 1rem;
+    border: 2px solid #4d4c4c;
+    margin-left: 2px;
+    border-radius: 5px;
+    width: 355px;
+    padding: 5px;
+}
 .blogs-wrapper{
     display: grid;
     gap: 15px;

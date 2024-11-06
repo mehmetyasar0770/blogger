@@ -52,10 +52,11 @@ function BlogList() {
        <input
             type="text"
             className="blog-input"
-            placeholder="Ara..."
+            placeholder="Başlıklarda Ara..."
             value={searchTerm}
             onChange={handleSearchChange}
           />
+          
       </div>
 
       <div className="blogs-wrapper">
